@@ -46,18 +46,18 @@ reads_ch = Channel
 /*
 * MAPPING w/ HISAT2 and SAMTOOLS
 */
-process mapping {
+process hisat2 {
 
   input:
-  set id, file(assembly) from assemblies_mapping_ch, file(reads) from reads_ch
+  set assembly_id, file(assembly) from assemblies_mapping_ch
+  set read_id, file(reads) from reads_ch
 
   output:
-  set id, file("${id}.sorted.bam") into mapping_counting_ch
+  set assembly_id, file("${assembly_id}.sorted.bam") into mapping_counting_ch
 
   shell:
   '''
-  hisat2 -x !{params.reference} -U !{fastq_trimmed} -S !{id}.sam -p !{params.cpus} 
-  samtools view -bS -o !{id}.bam !{id}.sam; samtools sort !{id}.bam -o !{id}.sorted.bam -T tmp --threads !{params.cpus};
-  rm !{id}.bam !{id}.sam
+  hisat2-build !{assembly} !{assembly_id} 
+  hisat2 -x !{assembly_id} -U !{reads} -p !{params.cpus} | samtools view -bS | samtools sort -T tmp --threads !{params.cpus} > !{assembly_id}.sorted.bam;
   ''' 
 }
