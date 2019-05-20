@@ -61,3 +61,4 @@ process hisat2 {
   hisat2 -x !{assembly_id} -U !{reads} -p !{params.cpus} | samtools view -bS | samtools sort -T tmp --threads !{params.cpus} > !{assembly_id}.sorted.bam
   ''' 
 }
+
