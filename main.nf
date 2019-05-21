@@ -45,9 +45,11 @@ reads_ch = Channel
 
 /*
 * MAPPING w/ HISAT2 and SAMTOOLS
+* TODO: maybe not needed here, but in general generate a merged channel like this (untested): 
+* set assembly_id, file(assembly), file(read) from assemblies_mapping.join(reads_ch)
 */
 process hisat2 {
-  echo true
+  // echo true
 
   input:
   set assembly_id, file(assembly) from assemblies_mapping_ch
