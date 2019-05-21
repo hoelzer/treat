@@ -47,6 +47,7 @@ reads_ch = Channel
 * MAPPING w/ HISAT2 and SAMTOOLS
 */
 process hisat2 {
+  echo true
 
   input:
   set assembly_id, file(assembly) from assemblies_mapping_ch
