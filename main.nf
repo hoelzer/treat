@@ -10,7 +10,7 @@ def helpMSG() {
     log.info """
 
     Usage:
-    nextflow run hoelzer/treat --cpus 30
+    nextflow run hoelzer/treat --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
 
     Mandatory:
     --assemblies    e.g.: 'trinity.fasta spades.fasta orp.fasta' or '*.fasta' or '*/*.fasta'
