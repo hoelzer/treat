@@ -19,7 +19,7 @@ def helpMSG() {
     --annotation    annotation file in gtf format corresponding to the reference file
 
     Options
-    --cpus                   max cores for local use [default $params.cpus]
+    --threads                max cores for local use [default $params.threads]
     --mem                    max memory in GB for local use [default $params.mem]
     --output                 name of the result folder [default $params.output]
 
@@ -61,7 +61,7 @@ process hisat2 {
   shell:
   '''
   hisat2-build !{assembly} !{assembly_id} 
-  hisat2 -x !{assembly_id} -U !{reads} -p !{params.cpus} | samtools view -bS | samtools sort -T tmp --threads !{params.cpus} > !{assembly_id}.sorted.bam
+  hisat2 -x !{assembly_id} -U !{reads} -p !{params.threads} | samtools view -bS | samtools sort -T tmp --threads !{params.threads} > !{assembly_id}.sorted.bam
   ''' 
 }
 
