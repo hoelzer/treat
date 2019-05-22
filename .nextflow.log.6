@@ -1,0 +1,90 @@
+May-21 10:14:24.854 [main] DEBUG nextflow.cli.Launcher - $> nextflow run .
+May-21 10:14:25.070 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.04.0
+May-21 10:14:26.807 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [dreamy_saha] - revision: 580c029890
+May-21 10:14:26.834 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/martin/git/mine/treat/nextflow.config
+May-21 10:14:26.835 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/martin/git/mine/treat/nextflow.config
+May-21 10:14:26.855 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-21 10:14:27.060 [main] DEBUG nextflow.Session - Session uuid: da7d5367-4d08-49ef-8f26-2df3ddf29f3a
+May-21 10:14:27.060 [main] DEBUG nextflow.Session - Run name: dreamy_saha
+May-21 10:14:27.061 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-21 10:14:37.157 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.04.0 build 5069
+  Modified: 17-04-2019 06:25 UTC (08:25 CEST)
+  System: Mac OS X 10.14.4
+  Runtime: Groovy 2.5.6 on OpenJDK 64-Bit Server VM 1.8.0_92-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 37674@Martins-MacBook-Air-2.local [10.231.243.19]
+  CPUs: 4 - Mem: 4 GB (71.2 MB) - Swap: 3 GB (1020.2 MB)
+May-21 10:14:37.223 [main] DEBUG nextflow.Session - Work-dir: /Users/martin/git/mine/treat/work [Mac OS X]
+May-21 10:14:37.224 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/martin/git/mine/treat/bin
+May-21 10:14:37.884 [main] DEBUG nextflow.Session - Session start invoked
+May-21 10:14:37.890 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-21 10:14:37.963 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-21 10:14:38.239 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-21 10:14:38.696 [main] DEBUG nextflow.util.CacheHelper - Config settings `withName:hisat2` matches process hisat2
+May-21 10:14:38.710 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-21 10:14:38.710 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-21 10:14:38.720 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-21 10:14:38.725 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-21 10:14:38.739 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=4 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+May-21 10:14:38.749 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+May-21 10:14:38.750 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-21 10:14:38.766 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-21 10:14:38.831 [main] DEBUG nextflow.Session - >>> barrier register (process: hisat2)
+May-21 10:14:38.839 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > hisat2 -- maxForks: 4
+May-21 10:14:38.898 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-21 10:14:38.898 [main] DEBUG nextflow.Session - Session await
+May-21 10:14:39.070 [Actor Thread 2] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /mnt/dessertlocal/projects/transcriptome_assembly/1905_update/treat/test_data/rna-spades.fasta -- Cause: java.nio.file.NoSuchFileException: /mnt/dessertlocal/projects/transcriptome_assembly/1905_update/treat/test_data/rna-spades.fasta
+May-21 10:14:39.074 [Actor Thread 2] DEBUG nextflow.util.CacheHelper - Unable to get file attributes file: /mnt/dessertlocal/projects/transcriptome_assembly/1905_update/treat/test_data/eco.fastq -- Cause: java.nio.file.NoSuchFileException: /mnt/dessertlocal/projects/transcriptome_assembly/1905_update/treat/test_data/eco.fastq
+May-21 10:14:39.194 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-21 10:14:39.202 [Task submitter] INFO  nextflow.Session - [0d/1fbeb0] Submitted process > hisat2 (1)
+May-21 10:15:21.487 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: hisat2 (1); status: COMPLETED; exit: 125; error: -; workDir: /Users/martin/git/mine/treat/work/0d/1fbeb00b28a9f6c798eea01818f894]
+May-21 10:15:21.942 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'hisat2 (1)'
+
+Caused by:
+  Process `hisat2 (1)` terminated with an error exit status (125)
+
+Command executed:
+
+  hisat2-build rna-spades.fasta rna-spades 
+  hisat2 -x rna-spades -U eco.fastq -p 4 | samtools view -bS | samtools sort -T tmp --threads 4 > rna-spades.sorted.bam
+
+Command exit status:
+  125
+
+Command output:
+  (empty)
+
+Command error:
+  Unable to find image 'nanozoo/hisat2:2.1.0--c6f93d9' locally
+  2.1.0--c6f93d9: Pulling from nanozoo/hisat2
+  e79bb959ec00: Already exists
+  2a7608a50ae3: Already exists
+  ed7fdbb53a8b: Already exists
+  d9f5448383b9: Already exists
+  e902202dc40d: Already exists
+  de57cf630958: Pulling fs layer
+  de57cf630958: Verifying Checksum
+  de57cf630958: Download complete
+  de57cf630958: Pull complete
+  Digest: sha256:15d208b1022ecd00e939c5f02cd35bc56bb8c601e5b7030bdc9b4c521e999d14
+  Status: Downloaded newer image for nanozoo/hisat2:2.1.0--c6f93d9
+  docker: Error response from daemon: Mounts denied: 
+  The path /mnt/dessertlocal/projects/transcriptome_assembly/1905_update/treat/test_data
+  is not shared from OS X and is not known to Docker.
+  You can configure shared paths from Docker -> Preferences... -> File Sharing.
+  See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
+  .
+
+Work dir:
+  /Users/martin/git/mine/treat/work/0d/1fbeb00b28a9f6c798eea01818f894
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+May-21 10:15:21.988 [Actor Thread 3] DEBUG nextflow.Session - <<< barrier arrive (process: hisat2)
+May-21 10:15:21.996 [main] DEBUG nextflow.Session - Session await > all process finished
+May-21 10:15:22.015 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `hisat2 (1)` terminated with an error exit status (125)
+May-21 10:15:22.124 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-21 10:15:22.126 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-21 10:15:22.166 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=0ms; failedDuration=42.1s; cachedDuration=0ms]
+May-21 10:15:22.433 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-21 10:15:22.491 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

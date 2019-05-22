@@ -1,0 +1,7 @@
+2019-05-21 10:14:37	45.5s	dreamy_saha	ERR	580c029890ff57d41646a2f446f72aa3	da7d5367-4d08-49ef-8f26-2df3ddf29f3a	nextflow run .
+2019-05-21 10:18:33	44.1s	cheesy_borg	OK	580c029890ff57d41646a2f446f72aa3	5e7826c8-405c-4d3f-8aa5-10a5163fbf26	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-21 10:23:59	37.1s	confident_goldberg	OK	580c029890ff57d41646a2f446f72aa3	56a6e612-cf41-4b2a-8070-97220bc0c42f	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-21 10:40:48	34.4s	soggy_banach	OK	1ee15ad7d5490cefa1ed7bf34dd69581	cd914066-59bb-4561-8e33-8e271ed42fe5	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-21 10:48:10	38.9s	determined_chandrasekhar	OK	0fddf0ad3b10db0ad35eee119bec98fd	4321d2d2-feba-4bdb-97a3-370ca3ea6e64	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-21 10:54:28	38.4s	curious_bose	OK	45edd08556b4ddc1316de033cb6193cc	bcd44421-0ec8-4bc1-a99a-c565205045ed	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-21 11:04:12	31.5s	amazing_spence	OK	45edd08556b4ddc1316de033cb6193cc	c186e175-9c26-432e-b5d5-546c2fb22396	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
