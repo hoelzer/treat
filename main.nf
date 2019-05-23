@@ -6,6 +6,9 @@
 * Author: hoelzer.martin@gmail.com
 */
 
+nextflow.preview.dsl=2
+include 'modules/treat'
+
 def helpMSG() {
     log.info """
 
