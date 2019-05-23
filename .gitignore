@@ -12,6 +12,7 @@
 
 work/
 results/
+treat_results/
 
 # Used by dotenv library to load environment variables.
 # .env
