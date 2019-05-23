@@ -10,8 +10,8 @@
 /test/version_tmp/
 /tmp/
 
-work/
 /work/
+/results/
 
 # Used by dotenv library to load environment variables.
 # .env

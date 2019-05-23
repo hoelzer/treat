@@ -1,0 +1,20 @@
+2019-05-23 21:31:13	4.3s	naughty_lovelace	ERR	ff5d5d1a23fb1018e8012d313cd939af	02e608d8-33a6-4881-864a-f89d796a32c6	nextflow run .
+2019-05-23 21:31:39	-	voluminous_lalande	-	ff5d5d1a23fb1018e8012d313cd939af	ec0f7a0e-77a9-446b-9f9b-db758e43d61f	nextflow run . --help
+2019-05-23 21:31:55	57.3s	modest_kilby	OK	ff5d5d1a23fb1018e8012d313cd939af	4c76ba0d-ab5c-47db-9d35-229d30f262a9	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-23 21:37:47	39.6s	cranky_miescher	OK	ff5d5d1a23fb1018e8012d313cd939af	12622438-278e-4d56-ba2a-bc1c402e890e	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+2019-05-23 21:38:56	-	tender_meucci	-	9a29b6824456534a398897d69abae20d	4e747c38-defe-4e84-8dff-25e664fecded	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:40:01	-	pedantic_cori	-	227b17813f0d849238e12a21582ccec5	bdb744b2-07f3-4302-b0c4-119f78b61eec	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:44:22	-	prickly_solvay	-	9a29b6824456534a398897d69abae20d	a6cf0658-ab30-4a60-857c-3b5208907f9f	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:46:00	1.8s	trusting_almeida	OK	c38985336baeb30bc447b2b96c0e55ab	aaf028c7-9cfd-47db-951f-8e0868613e7e	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:46:22	1.7s	confident_lalande	OK	c38985336baeb30bc447b2b96c0e55ab	c36bd61f-55d1-4363-8029-3c1dac15c662	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:53:21	10.5s	gigantic_wiles	OK	cdf2fdc134dfd648a93165db6e6d8e4c	2f377f3f-7535-49ba-869f-125a5bb12ac7	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 21:59:04	2.9s	hungry_crick	ERR	cdf2fdc134dfd648a93165db6e6d8e4c	f5b21f00-fd08-44f7-9815-e6fcfac12325	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:01:27	36.4s	serene_bardeen	OK	cdf2fdc134dfd648a93165db6e6d8e4c	7e165dd9-a40a-4de8-8b16-60e041d783da	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:03:29	-	hopeful_bartik	-	cdf2fdc134dfd648a93165db6e6d8e4c	ec31d5b9-a148-4f22-a525-f5ef284e21df	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:03:58	37.2s	cheesy_gutenberg	OK	2ab1cb076d0b001ee940e25b863e765b	33517a1d-b315-4b05-b76c-969ec954309a	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:05:09	44.7s	nostalgic_monod	OK	2ab1cb076d0b001ee940e25b863e765b	2fc47d94-c242-44e0-ae65-94a317c9a56a	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:06:40	34.9s	reverent_celsius	OK	2ab1cb076d0b001ee940e25b863e765b	8750f4ae-f32e-47d7-86fb-1a70701dc57e	nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+2019-05-23 22:07:59	38.2s	tiny_jang	OK	2ab1cb076d0b001ee940e25b863e765b	6814a0e6-ee35-4e21-8a98-ea1b9cd65bd8	nextflow run .
+2019-05-23 22:09:48	35.8s	thirsty_hopper	OK	afb424fb9d5b5715c7018545dc4e3d40	b8a78a1a-7e06-45e5-98e0-a0f5850afcae	nextflow run . --threads 3
+2019-05-23 22:13:18	-	tender_swirles	-	d786fd1908a82bee3a06190086f62792	a3904493-6c7b-4ba0-9065-62fe58d7ec2a	nextflow run .
+2019-05-23 22:16:21	35s	curious_tuckerman	OK	d786fd1908a82bee3a06190086f62792	e1ccf076-269f-4b37-9b4c-f40b1a60e386	nextflow run .

@@ -1,0 +1,45 @@
+May-23 22:05:07.129 [main] DEBUG nextflow.cli.Launcher - $> nextflow run . --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4
+May-23 22:05:07.414 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.05.0-edge
+May-23 22:05:08.862 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [nostalgic_monod] - revision: 2ab1cb076d
+May-23 22:05:08.887 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/martin/git/mine/treat/nextflow.config
+May-23 22:05:08.888 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/martin/git/mine/treat/nextflow.config
+May-23 22:05:08.910 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-23 22:05:09.179 [main] DEBUG nextflow.Session - Session uuid: 2fc47d94-c242-44e0-ae65-94a317c9a56a
+May-23 22:05:09.179 [main] DEBUG nextflow.Session - Run name: nostalgic_monod
+May-23 22:05:09.180 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-23 22:05:09.277 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.05.0-edge build 5097
+  Created: 20-05-2019 15:39 UTC (17:39 CEST)
+  System: Mac OS X 10.14.5
+  Runtime: Groovy 2.5.6 on OpenJDK 64-Bit Server VM 1.8.0_92-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 31362@Martins-Air-2.fritz.box [192.168.178.22]
+  CPUs: 4 - Mem: 4 GB (22.5 MB) - Swap: 3 GB (837.8 MB)
+May-23 22:05:09.307 [main] DEBUG nextflow.Session - Work-dir: /Users/martin/git/mine/treat/work [Mac OS X]
+May-23 22:05:09.307 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/martin/git/mine/treat/bin
+May-23 22:05:10.128 [main] DEBUG nextflow.Session - Session start invoked
+May-23 22:05:10.360 [main] WARN  nextflow.Session - There's no process matching config selector: HISAT2
+May-23 22:05:10.361 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-23 22:05:10.402 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 IS AN EXPERIMENTAL FEATURE UNDER DEVELOPMENT -- SYNTAX MAY CHANGE IN FUTURE RELEASE
+May-23 22:05:10.895 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:HISAT2` matches process HISAT2
+May-23 22:05:10.912 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-23 22:05:10.912 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-23 22:05:10.925 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-23 22:05:10.946 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=4 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+May-23 22:05:10.980 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-23 22:05:11.043 [main] WARN  nextflow.processor.TaskProcessor - Input `set` must define at least two component -- Check process `HISAT2`
+May-23 22:05:11.084 [main] DEBUG nextflow.Session - >>> barrier register (process: HISAT2)
+May-23 22:05:11.111 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > HISAT2 -- maxForks: 4
+May-23 22:05:11.161 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+May-23 22:05:11.222 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-23 22:05:11.222 [main] DEBUG nextflow.Session - Session await
+May-23 22:05:11.535 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-23 22:05:11.543 [Task submitter] INFO  nextflow.Session - [c4/351f1a] Submitted process > HISAT2 (1)
+May-23 22:05:53.129 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: HISAT2 (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/martin/git/mine/treat/work/c4/351f1a3672b479e18f649a27a26195]
+May-23 22:05:53.266 [Actor Thread 4] DEBUG nextflow.Session - <<< barrier arrive (process: HISAT2)
+May-23 22:05:53.271 [main] DEBUG nextflow.Session - Session await > all process finished
+May-23 22:05:53.282 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-23 22:05:53.282 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-23 22:05:53.324 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=41.5s; failedDuration=0ms; cachedDuration=0ms]
+May-23 22:05:53.717 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-23 22:05:53.775 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
