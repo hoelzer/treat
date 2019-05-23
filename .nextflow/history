@@ -1,0 +1,11 @@
+2019-05-23 22:30:50	4.2s	amazing_bohr	ERR	150a17ed99ddfdc27153327f31eded91	bbd6f21f-72f9-41b5-9d0b-8ef1d6fb8c18	nextflow run .
+2019-05-23 22:34:50	33.8s	naughty_yalow	OK	150a17ed99ddfdc27153327f31eded91	6cf40728-fa75-4da5-967b-6f273b62effe	nextflow run .
+2019-05-24 00:16:25	5m 42s	drunk_bhabha	ERR	27d3f1191924d6ecc2898613684df015	df6063e9-b62e-46f0-9d8c-c12433573bde	nextflow run .
+2019-05-24 00:28:13	5.5s	shrivelled_dubinsky	ERR	d03086cea5c3113268d0f625332261dc	88f813e5-d29f-47d5-a5d7-9f101e33ac84	nextflow run .
+2019-05-24 00:28:59	2m 2s	tiny_pare	OK	d03086cea5c3113268d0f625332261dc	eab4cfcc-931d-4d2e-9fc5-8ca494f4eda4	nextflow run .
+2019-05-24 00:33:50	5.7s	maniac_sax	ERR	27d3f1191924d6ecc2898613684df015	8a854053-8c87-442e-929c-0b1a00cb0e36	nextflow run .
+2019-05-24 00:34:40	2m 45s	kickass_noyce	ERR	27d3f1191924d6ecc2898613684df015	126d343f-f750-40cd-8203-cfcd491cdba8	nextflow run .
+2019-05-24 00:39:27	3m 2s	soggy_ampere	ERR	51b673413f763378ff9e53240e81bca5	404a4896-66d3-4bef-b17e-612f8bbd4b91	nextflow run .
+2019-05-24 00:43:34	1m 56s	wise_brenner	ERR	6f056b7156a804de4cc79421c759277d	0cbbaca6-f107-4ae7-8a30-f7082278caac	nextflow run .
+2019-05-24 00:46:55	2m 41s	admiring_bernard	OK	6f056b7156a804de4cc79421c759277d	d498e7e6-2604-4840-96ea-cf21ac803931	nextflow run .
+2019-05-24 00:50:53	2m 2s	small_shaw	OK	6f056b7156a804de4cc79421c759277d	ce8f32eb-1431-4eb3-8e79-998eae2dce9f	nextflow run .

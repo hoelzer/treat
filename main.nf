@@ -13,7 +13,7 @@ def helpMSG() {
     log.info """
 
     Usage:
-    nextflow run hoelzer/treat --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq
+    nextflow run hoelzer/treat --assemblies test_data/rna-spades.fasta --reads test_data/eco.fastq --threads 4 
 
     Mandatory:
     --assemblies    e.g.: 'trinity.fasta spades.fasta orp.fasta' or '*.fasta' or '*/*.fasta'
@@ -44,4 +44,5 @@ reads_ch = Channel
               .map { file -> tuple(file.simpleName, file) }
 
 
-HISAT2( assemblies_ch, reads_ch, params.threads)
+//HISAT2( assemblies_ch, reads_ch, params.threads)
+BUSCO( assemblies_ch, params.busco_dataset, params.threads )

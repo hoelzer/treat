@@ -1,9 +1,7 @@
-params.outdir = 'results'
+params.outdir = 'treat_results'
 
 /*
-* MAPPING w/ HISAT2 and SAMTOOLS
-* TODO: maybe not needed here, but in general generate a merged channel like this (untested): 
-* set assembly_id, file(assembly), file(read) from assemblies_mapping.join(reads_ch)
+* Mapping w/ HISAT2 and preprocessing w/ samtools
 */
 process HISAT2 {
   publishDir params.outdir, mode:'copy'
@@ -21,6 +19,26 @@ process HISAT2 {
   hisat2-build !{assembly} !{assembly_id} 
   hisat2 -x !{assembly_id} -U !{reads} -p !{threads} | samtools view -bS | samtools sort -T tmp --threads !{threads} > !{assembly_id}.sorted.bam
   ''' 
+}
+
+/*
+* Benchmark universal orthologous groups w/ BUSCO
+*/ 
+process BUSCO {
+  publishDir params.outdir, mode:'copy'
+
+  input:
+  set assembly_id, file(assembly)
+  val busco_dataset
+  val threads
+
+  output:
+  set assembly_id, file("run_${assembly_id}/short_summary_${assembly_id}.txt")
+
+  shell:
+  '''
+  run_busco -i !{assembly} -o !{assembly_id} -l /!{busco_dataset}/ -m tran -c !{threads}
+  '''
 }
 
 

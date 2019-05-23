@@ -1,0 +1,121 @@
+May-24 00:39:14.830 [main] DEBUG nextflow.cli.Launcher - $> nextflow run .
+May-24 00:39:15.117 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.05.0-edge
+May-24 00:39:17.423 [main] INFO  nextflow.cli.CmdRun - Launching `./main.nf` [soggy_ampere] - revision: 51b673413f
+May-24 00:39:17.457 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/martin/git/mine/treat/nextflow.config
+May-24 00:39:17.458 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/martin/git/mine/treat/nextflow.config
+May-24 00:39:17.474 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-24 00:39:17.781 [main] DEBUG nextflow.Session - Session uuid: 404a4896-66d3-4bef-b17e-612f8bbd4b91
+May-24 00:39:17.781 [main] DEBUG nextflow.Session - Run name: soggy_ampere
+May-24 00:39:17.783 [main] DEBUG nextflow.Session - Executor pool size: 4
+May-24 00:39:27.933 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.05.0-edge build 5097
+  Created: 20-05-2019 15:39 UTC (17:39 CEST)
+  System: Mac OS X 10.14.5
+  Runtime: Groovy 2.5.6 on OpenJDK 64-Bit Server VM 1.8.0_92-b15
+  Encoding: UTF-8 (UTF-8)
+  Process: 30425@Martins-MacBook-Air-2.local [192.168.178.22]
+  CPUs: 4 - Mem: 4 GB (37.5 MB) - Swap: 4 GB (1.4 GB)
+May-24 00:39:28.032 [main] DEBUG nextflow.Session - Work-dir: /Users/martin/git/mine/treat/work [Mac OS X]
+May-24 00:39:28.033 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/martin/git/mine/treat/bin
+May-24 00:39:28.886 [main] DEBUG nextflow.Session - Session start invoked
+May-24 00:39:29.252 [main] WARN  nextflow.Session - There's no process matching config selector: HISAT2
+May-24 00:39:29.253 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-24 00:39:29.310 [main] WARN  nextflow.NextflowMeta$Preview - DSL 2 IS AN EXPERIMENTAL FEATURE UNDER DEVELOPMENT -- SYNTAX MAY CHANGE IN FUTURE RELEASE
+May-24 00:39:30.125 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:HISAT2` matches process HISAT2
+May-24 00:39:30.155 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-24 00:39:30.156 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-24 00:39:30.167 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-24 00:39:30.187 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=4 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+May-24 00:39:30.204 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-24 00:39:30.322 [main] DEBUG nextflow.Session - >>> barrier register (process: HISAT2)
+May-24 00:39:30.350 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > HISAT2 -- maxForks: 4
+May-24 00:39:30.417 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BUSCO` matches process BUSCO
+May-24 00:39:30.418 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+May-24 00:39:30.418 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+May-24 00:39:30.419 [main] DEBUG nextflow.Session - >>> barrier register (process: BUSCO)
+May-24 00:39:30.420 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > BUSCO -- maxForks: 4
+May-24 00:39:30.424 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+May-24 00:39:30.453 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-24 00:39:30.453 [main] DEBUG nextflow.Session - Session await
+May-24 00:39:30.906 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-24 00:39:30.916 [Task submitter] INFO  nextflow.Session - [73/4c152e] Submitted process > HISAT2 (1)
+May-24 00:39:30.969 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-24 00:39:30.971 [Task submitter] INFO  nextflow.Session - [35/f8bd25] Submitted process > BUSCO (1)
+May-24 00:40:14.786 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: HISAT2 (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/martin/git/mine/treat/work/73/4c152e2cfbccce8324208a7d4bcae8]
+May-24 00:40:14.887 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: HISAT2)
+May-24 00:42:27.731 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: BUSCO (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/martin/git/mine/treat/work/35/f8bd257425186f23a2ec1f89452711]
+May-24 00:42:27.950 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `BUSCO (1)` is unable to find [UnixPath]: `/Users/martin/git/mine/treat/work/35/f8bd257425186f23a2ec1f89452711/run_busco/short_summary_rna-spades.txt` (pattern: `run_busco/short_summary_rna-spades.txt`)
+May-24 00:42:28.713 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'BUSCO (1)'
+
+Caused by:
+  Missing output file(s) `run_busco/short_summary_rna-spades.txt` expected by process `BUSCO (1)`
+
+Command executed:
+
+  run_busco -i rna-spades.fasta -o busco -l /enterobacteriales_odb9/ -m tran -c 4
+
+Command exit status:
+  0
+
+Command output:
+  INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 05/23/2019 22:39:33 ******************
+  INFO	Configuration loaded from /opt/conda/bin/../config/config.ini
+  INFO	Init tools...
+  INFO	Check dependencies...
+  INFO	Check input file...
+  INFO	To reproduce this run: python /opt/conda/bin/run_busco -i rna-spades.fasta -o busco -l /enterobacteriales_odb9/ -m transcriptome -c 4
+  INFO	Mode is: transcriptome
+  INFO	The lineage dataset is: enterobacteriales_odb9 (prokaryota)
+  INFO	Temp directory is ./tmp/
+  INFO	****** Step 1/2, current time: 05/23/2019 22:39:33 ******
+  INFO	Create blast database...
+  INFO	[makeblastdb]	Building a new DB, current time: 05/23/2019 22:39:33
+  INFO	[makeblastdb]	New DB name:   tmp/busco_920631946
+  INFO	[makeblastdb]	New DB title:  rna-spades.fasta
+  INFO	[makeblastdb]	Sequence type: Nucleotide
+  INFO	[makeblastdb]	Keep Linkouts: T
+  INFO	[makeblastdb]	Keep MBits: T
+  INFO	[makeblastdb]	Maximum file size: 1000000000B
+  INFO	[makeblastdb]	Adding sequences from FASTA; added 7051 sequences in 0.525532 seconds.
+  INFO	[makeblastdb]	1 of 1 task(s) completed at 05/23/2019 22:39:34
+  INFO	Running tblastn, writing output to run_busco/blast_output/tblastn_busco.tsv...
+  INFO	[tblastn]	1 of 1 task(s) completed at 05/23/2019 22:41:26
+  INFO	****** Step 2/2, current time: 05/23/2019 22:41:26 ******
+  INFO	Maximum number of candidate transcript per BUSCO limited to: 3
+  INFO	Getting coordinates for candidate transcripts...
+  INFO	Extracting candidate transcripts...
+  INFO	Translating candidate transcripts...
+  INFO	Running HMMER to confirm transcript orthology:
+  INFO	[hmmsearch]	117 of 1169 task(s) completed at 05/23/2019 22:41:49
+  INFO	[hmmsearch]	234 of 1169 task(s) completed at 05/23/2019 22:41:52
+  INFO	[hmmsearch]	351 of 1169 task(s) completed at 05/23/2019 22:41:54
+  INFO	[hmmsearch]	468 of 1169 task(s) completed at 05/23/2019 22:41:56
+  INFO	[hmmsearch]	585 of 1169 task(s) completed at 05/23/2019 22:41:59
+  INFO	[hmmsearch]	702 of 1169 task(s) completed at 05/23/2019 22:42:01
+  INFO	[hmmsearch]	819 of 1169 task(s) completed at 05/23/2019 22:42:04
+  INFO	[hmmsearch]	936 of 1169 task(s) completed at 05/23/2019 22:42:07
+  INFO	[hmmsearch]	1053 of 1169 task(s) completed at 05/23/2019 22:42:09
+  INFO	[hmmsearch]	1169 of 1169 task(s) completed at 05/23/2019 22:42:11
+  INFO	Results:
+  INFO	C:32.2%[S:32.1%,D:0.1%],F:43.1%,M:24.7%,n:781
+  INFO	252 Complete BUSCOs (C)
+  INFO	251 Complete and single-copy BUSCOs (S)
+  INFO	1 Complete and duplicated BUSCOs (D)
+  INFO	337 Fragmented BUSCOs (F)
+  INFO	192 Missing BUSCOs (M)
+  INFO	781 Total BUSCO groups searched
+  INFO	BUSCO analysis done. Total running time: 172.87257361412048 seconds
+  INFO	Results written in run_busco/
+
+Work dir:
+  /Users/martin/git/mine/treat/work/35/f8bd257425186f23a2ec1f89452711
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+May-24 00:42:28.829 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: BUSCO)
+May-24 00:42:28.829 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `run_busco/short_summary_rna-spades.txt` expected by process `BUSCO (1)`
+May-24 00:42:28.829 [main] DEBUG nextflow.Session - Session await > all process finished
+May-24 00:42:28.900 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-24 00:42:28.905 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-24 00:42:28.935 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=1; ignoredCount=0; cachedCount=0; succeedDuration=43.8s; failedDuration=2m 57s; cachedDuration=0ms]
+May-24 00:42:29.084 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-24 00:42:29.139 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
