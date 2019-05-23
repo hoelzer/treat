@@ -12,6 +12,8 @@
 
 work/
 /work/
+results/
+/results/
 
 # Used by dotenv library to load environment variables.
 # .env

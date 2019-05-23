@@ -35,34 +35,10 @@ if (params.assemblies == '') {exit 1, "--assemblies is a required parameter"}
 assemblies_ch = Channel
               .fromPath(params.assemblies)
               .map { file -> tuple(file.simpleName, file) }
-assemblies_ch.into { assemblies_mapping_ch; assemblies_report_ch }
-assemblies_report_ch.subscribe { println "Got: ${it}" }
 
 reads_ch = Channel
               .fromPath(params.reads)
               .map { file -> tuple(file.simpleName, file) }
 
 
-/*
-* MAPPING w/ HISAT2 and SAMTOOLS
-* TODO: maybe not needed here, but in general generate a merged channel like this (untested): 
-* set assembly_id, file(assembly), file(read) from assemblies_mapping.join(reads_ch)
-*/
-process hisat2 {
-  // echo true
-
-  input:
-  set assembly_id, file(assembly) from assemblies_mapping_ch
-  set read_id, file(reads) from reads_ch
-
-  output:
-  set assembly_id, file("${assembly_id}.sorted.bam") into mapping_counting_ch
-
-  shell:
-  '''
-  hisat2-build !{assembly} !{assembly_id} 
-  hisat2 -x !{assembly_id} -U !{reads} -p !{params.threads} | samtools view -bS | samtools sort -T tmp --threads !{params.threads} > !{assembly_id}.sorted.bam
-  ''' 
-}
-
-
+HISAT2( assemblies_ch, reads_ch, params.threads)
