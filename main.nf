@@ -44,5 +44,5 @@ reads_ch = Channel
               .map { file -> tuple(file.simpleName, file) }
 
 
-//HISAT2( assemblies_ch, reads_ch, params.threads)
+HISAT2( assemblies_ch, reads_ch, params.threads)
 BUSCO( assemblies_ch, params.busco_dataset, params.threads )
